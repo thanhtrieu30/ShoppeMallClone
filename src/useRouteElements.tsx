@@ -4,7 +4,7 @@ import RegisterLayout from './layouts/RegisterLayout'
 import Register from './pages/Register'
 import Login from './pages/Login'
 export default function useRouteElements() {
-  let routeElements = useRoutes([
+  const routeElements = useRoutes([
     {
       path: '/',
       element: <Home />
