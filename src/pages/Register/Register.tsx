@@ -1,33 +1,54 @@
 import { Link } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
+import { Rules } from '../../utils/rulesRegisterForm'
+
+interface TypeForm {
+  email: string
+  password: string
+  confirm_password?: string
+}
 
 export default function Register() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm<TypeForm>()
+
+  const onSubmit = handleSubmit((data) => {
+    console.log(data)
+  })
+
   return (
     <div className='bg-registerBg'>
       <div className='max-w-7xl mx-auto px-6'>
         <div className='lg:bg-hero-pattern bg-contain bg-no-repeat h-[600px]  '>
           <div className='grid grid-cols-1 lg:grid-cols-5 py-12 lg:py-32 lg:pr-10'>
             <div className='lg:col-span-2 lg:col-start-4'>
-              <form className='p-5 bg-white shadow-sm rounded'>
+              <form className='p-5 bg-white shadow-sm rounded' onSubmit={onSubmit}>
                 <div className='text-xl '>Đăng ký</div>
                 <div className='mt-8'>
                   <input
+                    {...register('email', Rules.email)}
                     placeholder='Email'
                     type='text'
-                    name='email'
                     className='w-full p-2 border border-gray-300 outline-none rounded-sm focus:border-gray-500 focus:shadow-md'
                   />
-                  {/* <div className='mt-1 text-red-600 min-h-[1rem] text-sm'>Email không tồn tại</div> */}
+                  <div className=' text-red-600 min-h-[1.25rem] text-sm'>{errors.email?.message}</div>
                 </div>
-                <div className='mt-3'>
+                <div className='mt-2'>
                   <input
+                    {...register('password', Rules.password)}
                     placeholder='Mật khẩu'
                     type='password'
                     name='password'
                     className='w-full p-2 border border-gray-300 outline-none rounded-sm focus:border-gray-500'
                   />
+                  <div className=' text-red-600 min-h-[1.25rem] text-sm'>{errors.password?.message}</div>
                 </div>
-                <div className='mt-3'>
+                <div className='mt-2'>
                   <input
+                    {...register('confirm_password')}
                     placeholder='Nhập lại mật khẩu'
                     type='password'
                     name='confirm_password'
