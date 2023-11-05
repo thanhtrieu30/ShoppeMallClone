@@ -4,4 +4,4 @@
 
 --- Tên dự án : ShoppeMallClone
 
---- Được xây dựng trên mục đích học tập
+--- Project được xây dựng trên mục đích học tập qua mentor
