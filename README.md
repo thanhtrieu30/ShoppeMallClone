@@ -4,4 +4,8 @@
 
 --- Tên dự án : ShoppeMallClone
 
---- Project được xây dựng trên mục đích học tập qua mentor
+--- Project được xây dựng trên mục đích học tập
+
+--- Chức năng của dự án gồm :
+
+--- Công nghệ được sử dụng gồm :
