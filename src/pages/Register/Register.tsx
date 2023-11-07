@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
-import { getRules } from '../../utils/rulesRegisterForm'
+import { schema, Schema } from '../../utils/rulesRegisterForm'
 import Input from '../../components/Input'
+import { yupResolver } from '@hookform/resolvers/yup'
 
-interface TypeForm {
-  email: string
-  password: string
-  confirm_password?: string
-}
+// interface TypeForm {
+//   email: string
+//   password: string
+//   confirm_password?: string
+// }
 
 export default function Register() {
   const {
@@ -15,9 +16,10 @@ export default function Register() {
     handleSubmit,
     getValues,
     formState: { errors }
-  } = useForm<TypeForm>()
+  } = useForm<Schema>({
+    resolver: yupResolver(schema)
+  })
 
-  const Rules = getRules(getValues)
   const onSubmit = handleSubmit(
     (data) => {
       console.log(data)
@@ -39,7 +41,6 @@ export default function Register() {
                 {/* email */}
                 <Input
                   name='email'
-                  rules={Rules.email}
                   className='mt-8'
                   register={register}
                   placeholder='Email'
@@ -50,7 +51,6 @@ export default function Register() {
                 {/* password */}
                 <Input
                   name='password'
-                  rules={Rules.password}
                   className='mt-2'
                   register={register}
                   placeholder='Mật khẩu'
@@ -62,7 +62,6 @@ export default function Register() {
                 {/* confirm_password */}
                 <Input
                   name='confirm_password'
-                  rules={Rules.confirm_password}
                   className='mt-2'
                   register={register}
                   placeholder='Nhập lại mật khẩu'
