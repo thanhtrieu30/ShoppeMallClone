@@ -6,7 +6,7 @@ class Http {
     this.instance = axios.create({
       baseURL: 'https://api-ecom.duthanhduoc.com/',
       timeout: 10000,
-      headers: { 'content-type': 'applycation/json' }
+      headers: { 'Content-type': 'application/json' }
     })
   }
 }
