@@ -4,7 +4,7 @@
 
 --- Tên dự án : ShoppeMallClone
 
---- Project được xây dựng trên mục đích học tập
+--- Project được xây dựng trên mục đích học tập.
 
 --- Chức năng của dự án gồm :
 
