@@ -8,4 +8,8 @@
 
 --- Chức năng của dự án gồm :
 
+- Register
+- Login
+-
+
 --- Công nghệ được sử dụng gồm :
