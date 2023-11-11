@@ -2,7 +2,7 @@
 
 --- Đây là dự án cá nhân của Trương Thanh Triều.
 
---- Tên dự án : ShoppeMallClone
+--- Tên dự án : ShoppeMallClone.
 
 --- Project được xây dựng trên mục đích học tập.
 
