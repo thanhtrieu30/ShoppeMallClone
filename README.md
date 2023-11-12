@@ -10,6 +10,6 @@
 
 - Register
 - Login
--
+- Logout
 
 --- Công nghệ được sử dụng gồm :
