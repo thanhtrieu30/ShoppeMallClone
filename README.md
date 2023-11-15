@@ -12,5 +12,4 @@
 - Login
 - Logout
 -
-
---- Công nghệ được sử dụng gồm :
+- --- Công nghệ được sử dụng gồm :
