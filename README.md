@@ -8,7 +8,6 @@
 
 --- Chức năng của dự án gồm :
 
-
 - Register
 - Login
 - Logout
@@ -17,4 +16,5 @@
 -
 -
 -
+
 - --- Công nghệ được sử dụng gồm :
